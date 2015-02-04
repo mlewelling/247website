@@ -1,0 +1,92 @@
+html {
+height: 100%;
+}
+
+body {
+background-color: #EBEBEB;
+min-height: 100%;
+}
+
+#headerContainer {
+width: 972px;
+height: 145px;
+padding-left: 20px;
+}
+
+#uits_icon {
+float: left;
+width: 389px;
+}
+
+#banner_photo {
+float: right;
+width:583px;
+}
+
+#main {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	min-height: 100%;
+}
+
+
+#navbar {	
+	float: left;
+	width: 20%;
+	min-height: 100%;
+	background-color: #4B4D52;
+	color: #FFF2E7;
+	border: 2px solid #a1a1a1;
+	border-radius: 10px;
+}
+
+#container {
+	float: right;
+	width: 79%;
+}
+
+#sliderb_container > div > div > div.sliderb-T > div > div > div:nth-child(3) > div:nth-child(3) > div.av > div > a, #firstLink > a:nth-child(1) {
+	color: white;
+}
+#sliderb_container > div > div > div.sliderb-T > div > div > div:nth-child(3) > div:nth-child(3) > div.av > div > a:hover, #firstLink > a:nth-child(1):hover {
+	color: red;
+}
+
+
+
+
+#tableContainer {
+border-collapse: collapse;
+font-family: "Lucida Sans Unicode","Lucida Grande", Sans-Serif;
+font-size: 18px;
+text-align: left;
+width: 100%;
+}
+
+#firstSection, #secondSection, #thirdSection, #fourthSection {
+	display: none;
+}
+#firstHeader, #secondHeader, #thirdHeader, #fourthHeader {
+	text-decoration: underline;
+}
+#firstHeader:hover, #secondHeader:hover, #thirdHeader:hover, #fourthHeader:hover {
+	color: #FF6666;
+}
+
+#bodyContainer {
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid #a1a1a1;
+}
+
+#contentWrapper > p {
+	text-align: center;
+	font-family: "Lucida Sans Unicode","Lucida Grande", Sans-Serif;
+	text-size: 20px;
+	color: red;
+	padding-right: 160px;
+	text-decoration: underline;
+	
+}
+
