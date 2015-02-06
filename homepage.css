@@ -11,8 +11,21 @@ body {
 	background-color: #66737B;
 }
 
-#content {
+#headerContainer {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#contentContainer {
 	width: auto;
+}
+
+#content {
+	font-weight: bold;
+	font-size: 17px;
+	color: black;
+	padding-left: 100px;
+	padding-right: 100px;
 }
 
 #imageWrapper > div.col-md-3 {
