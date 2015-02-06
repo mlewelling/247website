@@ -1,2 +1,5 @@
 Sidr information for menu content
 http://www.berriart.com/sidr/#usage
+
+info on nesting floats correctly
+http://stackoverflow.com/questions/218760/how-do-you-keep-parents-of-floated-elements-from-collapsing
