@@ -3,6 +3,7 @@
 <html>
 	<head>
 	<title>24/7 Support Center </title>
+	<!--jquery must load first in order to load js script properly-->
 	<script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="homepage.css">
@@ -12,7 +13,11 @@
 	<body>
 	
 		<div id="wrapper">
-	
+			<!--The container for the images at the top of the page-->
+			<div id= "uabanner"> 
+			<img src="./img/ua_banner.gif">
+			</div>
+			<!--putting both images into the header container-->
 			<div id="headerContainer" style="overflow: auto;">
 				<div style="float: left;"> 
 					<img src="./img/uits_icon.gif">
@@ -21,7 +26,8 @@
 					<img src="./img/banner_photo.jpg">
 				</div>
 			</div>
-		
+			<!-- Creating the navigation bar at the top// if the color needs to be changed you can select the CSS identifier and use !important on the active link. The default color is in the bootstrap
+			css file... too much work to change from there-->
 			<div id="navbar">
 				<nav class="navbar navbar-inverse">
 				  <div class="container-fluid">
@@ -50,6 +56,8 @@
 			<div id="bodyContainer">
 					
 					<div id="imageWrapper" style="overflow: auto;">
+						
+						<!-- The image slider in the center of the page. The images are contained in the img folder on the root directory and can be changed by chaging their source in the code -->
 						<div id="imageSlider" style="float: left;">
 						
 						<script>
@@ -255,6 +263,11 @@
 						
 						</div>
 						
+						<!--creating the menu bar to the right of the image slider
+						if additional drop down menus are added, the following script must be used:::
+						<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>-->
+						
 						<div class="col-md-3" style="float: right;">
 							  <ul class="nav nav-pills nav-stacked">
 								<li class="active"><a href="#">Home</a></li>
@@ -275,6 +288,8 @@
 				<br>
 				<br>
 				<br>
+				
+				<!--This will eventually have another page that can be updated from a remote form on a different page. For now it's just used to test adding text to the page-->
 				<div id="content">
 				<h1 id="contentHeader" style="font-size: 18px; color: white; text-align: center; text-decoration: underline;"> <strong> News and Updates </strong> </h1> 
 				This is the text that is going to go into the body of the content. This will eventually
@@ -296,7 +311,7 @@
 			</div>
 		</div>
 	</body>
-
+	<!--js scripts added at the bottom of the page to increase page load speed-->
 	<script type="text/javascript" src="./js/jExpand.js"></script>
 	<script type="text/javascript" src="./js/headers.js"></script>
 	<script type="text/javascript" src="./sliderjs/js/jssor.js"></script>
