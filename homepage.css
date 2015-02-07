@@ -1,19 +1,23 @@
 body {
 	width: 100%;
 	height: 100%;
-	background-color: #2A2B2B !important;
+	background-color: #F2F2F2 !important;
 }
 
 #wrapper {
 	width: 1250px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #66737B;
+	background-color: #FFFFFF;
 }
 
 #headerContainer {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#navbar > nav {
+	background-color: #606060 !important;
 }
 
 #contentContainer {
@@ -28,10 +32,30 @@ body {
 	padding-right: 100px;
 }
 
+#navbar > nav > div > div.navbar-header > a {
+	color: #FF4D4D !important;
+}
+
+#navbar > nav > div > div:nth-child(2) > ul > li:nth-child(3) > a:hover, #navbar > nav > div > div:nth-child(2) > ul > li:nth-child(5) > a:hover, #navbar > nav > div > div:nth-child(2) > ul > li:nth-child(7) > a:hover {
+	color: #C8C8C8;
+	text-shadow: 0px 0px 0px black !important;
+}
+
+#sidebar:hover, #navbar > nav > div > div:nth-child(2) > ul > li:nth-child(4) > a:hover, #navbar > nav > div > div:nth-child(2) > ul > li:nth-child(6) > a:hover  {
+	color: #C8C8C8;
+	text-shadow: 0px 0px 0px black !important;
+}
+
+#navbar > nav > div > div:nth-child(2) > ul > li:nth-child(5) > a, #navbar > nav > div > div:nth-child(2) > ul > li:nth-child(6) > a, 
+#navbar > nav > div > div:nth-child(2) > ul > li:nth-child(3) > a, #navbar > nav > div > div:nth-child(2) > ul > li:nth-child(4) > a, 
+#navbar > nav > div > div:nth-child(2) > ul > li.dropdown > a , #navbar > nav > div > div:nth-child(2) > ul > li:nth-child(7) > a, #sidebar {
+	font-size: 18px;
+	color: white;
+    text-shadow: 0px 1px 0px black;
+}
+
 #imageWrapper > div.col-md-3 {
 	padding-right: 50px;
-	height 100%;
-	
 }
 
 #imageWrapper > div.col-md-3 > ul > li.active, #imageWrapper > div.col-md-3 > ul > li.dropdown > a, 
@@ -41,15 +65,39 @@ body {
 }
 
 #imageWrapper > div.col-md-3 > ul > li.active > a {
-	background-color: #FF4D4D !important;
-	color: white !important;
+	background-color: #0088CC !important;
+	color: black !important;
+}
 
+#imageWrapper > div.col-md-3 > ul > li.dropdown > a, #imageWrapper > div.col-md-3 > ul > li:nth-child(3) > a, #imageWrapper > div.col-md-3 > ul > li:nth-child(4) > a {
+	color: black !important;
 }
 
 #imageWrapper > div.col-md-3 > ul > li.dropdown > a:hover, #imageWrapper > div.col-md-3 > ul > li:nth-child(3) > a:hover, #imageWrapper > div.col-md-3 > ul > li:nth-child(4) > a:hover {
 	color: black !important;
 }
 
+#imageWrapper > div.col-md-3 > ul > li.dropdown > a:selected, #imageWrapper > div.col-md-3 > ul > li:nth-child(3) > a:selected, #imageWrapper > div.col-md-3 > ul > li:nth-child(4) > a:selected {
+	color: black !important;
+}
+
+#sidr > ul > li.active {
+	background-color: black;
+	background: rgba(0,0,0,0.6);
+}
+#sidr > ul > li.active > a {
+	color: white;
+	text-shadow: 0px 1px 0px black;
+}
+
+#contentHeader {
+	color: #003366 !important;
+}
+
 #navbar > nav > div {
 	font-weight: bold;
+}
+
+#navbar > nav > div > div.navbar-header > a {
+font-size: 22px;
 }

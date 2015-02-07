@@ -6,8 +6,10 @@
 	<!--jquery must load first in order to load js script properly-->
 	<script type="text/javascript" src="./js/jquery-2.1.3.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./sidrjs/jquery.sidr.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="homepage.css">
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./sidrjs/stylesheets/jquery.sidr.light.css">
 	</head>
 	
 	<body>
@@ -16,6 +18,9 @@
 			<!--The container for the images at the top of the page-->
 			<!--putting both images into the header container-->
 			<div id="headerContainer" style="overflow: auto;">
+				<div id="mlkmap" style="float: right;">
+					<img src="./img/mlkmap.jpg">
+				</div>
 				<div id= "uabanner"> 
 					<img src="./img/ua_banner.gif">
 				</div>
@@ -36,7 +41,24 @@
 					</div>
 					<div>
 					  <ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
+						<script>
+						$(document).ready(function() {
+						  $('#sidebar').sidr();
+						});
+						</script>
+						
+						<!--Adding the sidrjs pullout bar-->
+						<li><a id="sidebar" href="#sidr">Downloads</a>
+							<div id="sidr"> 
+								<ul>
+									<li class="active"><a href="#">Office Downloads</a>
+										<li><a href="http://www.google.com"> Office 2010 Professional Plus </a></li>
+									</li>
+									<li><a href="#">More options to come.....</a></li>
+								</ul>
+							</div>
+						</li>
+						
 						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Youtube Videos <span class="caret"></span></a>
 						  <ul class="dropdown-menu">
 							<li><a href="#">Test Link 1</a></li>
@@ -45,7 +67,18 @@
 						  </ul>
 						</li>
 						<li><a href="#">How to Documents</a></li>
-						<li><a href="#">Downloads</a></li>
+						
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Helpful Resources <span class="caret"></span></a>
+						  <ul class="dropdown-menu">
+							<li><a href="https://netid.arizona.edu/chgid_pw.php">Change NetID Password</a></li>
+							<li><a href="#">Registrar</a></li>
+							<li><a href="#">UofA Calendar</a></li>
+							<li><a href="#">24/7 Sharepoint</a></li>
+						  </ul>
+						</li>
+						
+						<li style="padding-left: 100px; form target="_blank"><a href="http://catmail.arizona.edu">CatMail</a></li>
+						<li style="form target="_blank"><a href="http://d2l.arizona.edu">D2L</a></li>
 					  </ul>
 					</div>
 				  </div>
@@ -60,7 +93,7 @@
 						<!-- The image slider in the center of the page. The images are contained in the img folder on the root directory and can be changed by chaging their source in the code -->
 						<div id="imageSlider" style="float: left;">
 						
-						<script>
+							<script>
 									jQuery(document).ready(function ($) {
 										//Reference http://www.jssor.com/development/slider-with-slideshow-jquery.html
 										//Reference http://www.jssor.com/development/tool-slideshow-transition-viewer.html
@@ -125,7 +158,7 @@
 										function ScaleSlider() {
 											var parentWidth = jssor_sliderb.$Elmt.parentNode.clientWidth;
 											if (parentWidth)
-												jssor_sliderb.$ScaleWidth(Math.min(parentWidth, 900));
+												jssor_sliderb.$ScaleWidth(Math.min(parentWidth, 1250));
 											else
 												window.setTimeout(ScaleSlider, 30);
 										}
@@ -136,11 +169,11 @@
 										$(window).bind("orientationchange", ScaleSlider);
 										//responsive code end
 									});
-								</script>
+							</script>
 								<!-- Jssor Slider Begin -->
 								<!-- You can move inline styles to css file or css block. -->
-								<div id="sliderb_container" style="position: relative; width: 900px;
-									height: 500px; overflow: hidden;">
+								<div id="sliderb_container" style="position: relative; width: 1250px;
+									height: 650px; overflow: hidden;">
 
 									<!-- Loading Screen -->
 									<div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -153,10 +186,12 @@
 									</div>
 
 									<!-- Slides Container -->
-									<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 900px; height: 500px;
+									<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1250px; height: 650px;
 										overflow: hidden;">
+										
+										<!--Th-->
 										<div>
-											<img u=image src="./img/img1.jpg" />
+											<img u=image src="./img/img1.jpg"/>
 											<div u="thumb">Test first header -- can slide in all directions</div>
 										</div>
 										<div>
@@ -174,13 +209,13 @@
 									</div>
 
 									<!-- ThumbnailNavigator Skin Begin -->
-									<div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height:45px; width:900px;">
+									<div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height:45px; width:1250px;">
 										<div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block;
 											background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
 										</div>
 										<!-- Thumbnail Item Skin Begin -->
 										<div u="slides">
-											<div u="prototype" style="POSITION: absolute; WIDTH: 900px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
+											<div u="prototype" style="POSITION: absolute; WIDTH: 1250px; HEIGHT: 45px; TOP: 0; LEFT: 0;">
 												<div u="thumbnailtemplate" style="font-family: verdana; font-weight: normal; POSITION: absolute; WIDTH: 100%; HEIGHT: 100%; TOP: 0; LEFT: 0; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></div>
 											</div>
 										</div>
@@ -267,22 +302,6 @@
 						if additional drop down menus are added, the following script must be used:::
 						<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>-->
-						
-						<div class="col-md-3" style="float: right;">
-							  <ul class="nav nav-pills nav-stacked">
-								<li class="active"><a href="#">Home</a></li>
-								<li class="dropdown">
-								  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu 1 <span class="caret"></span></a>
-								  <ul class="dropdown-menu">
-									<li><a href="#">Submenu 1-1</a></li>
-									<li><a href="#">Submenu 1-2</a></li>
-									<li><a href="#">Submenu 1-3</a></li>                        
-								  </ul>
-								</li>
-								<li><a href="#">Menu 2</a></li>
-								<li><a href="#">Menu 3</a></li>
-							  </ul>
-						</div>
 					</div>
 			
 				<br>
@@ -291,7 +310,7 @@
 				
 				<!--This will eventually have another page that can be updated from a remote form on a different page. For now it's just used to test adding text to the page-->
 				<div id="contentContainer">
-					<h1 id="contentHeader" style="font-size: 18px; color: white; text-align: center; text-decoration: underline;"> <strong> News and Updates </strong> </h1> 
+					<h1 id="contentHeader" style="font-size: 26px; color: white; text-align: center; text-decoration: underline;"> <strong> News and Updates </strong> </h1> 
 					<br>
 					<div id="content">
 					This is the text that is going to go into the body of the content. This will eventually
@@ -320,5 +339,5 @@
 	<script type="text/javascript" src="./sliderjs/js/jssor.js"></script>
 	<script type="text/javascript" src="./sliderjs/js/jssor.slider.mini.js"></script>
 	<script type="text/javascript" src="./sliderjs/js/jssor.slider.js"></script>
-
+	<script type="text/javascript" src="./sidrjs/jquery.sidr.min.js"></script>
 </html>
